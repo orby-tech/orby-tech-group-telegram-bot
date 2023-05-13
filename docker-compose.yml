@@ -3,9 +3,9 @@ version: "3"
 services:
   orby-tech-group-telegram-bot_deploy:
     build: ./container
-    ports:
-      - 2300:2000
-    networks:
-      - postgres
+    container_name: orby-tech-group-telegram-bot_deploy
+    volumes:
+      - ./value:/orby-tech-group-telegram-bot/value
+
     env_file:
       - .env
