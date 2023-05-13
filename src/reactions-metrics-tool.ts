@@ -77,11 +77,13 @@ export class SubscribeController {
   }
 
   public subscribe(userId: number) {
+    const oldSub = this.subs.find((sub) => sub.userId === userId) || {};
     this.subs = [
-      ...this.subs,
+      ...this.subs.filter((sub) => sub.userId !== userId),
       {
         userId,
         intervalInMiliSeconds: 1000 * 60 * 60,
+        ...oldSub,
         lastNotify: Date.now(),
         active: true,
       },
