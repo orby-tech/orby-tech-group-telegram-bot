@@ -36,7 +36,10 @@ const subscribeController = new SubscribeController(bot);
 
 bot.context.sendMessage?.("Hello world");
 
-bot.start((ctx) => ctx.reply("Welcome"));
+bot.start(async (ctx) => {
+  ctx.reply("Welcome!");
+  await keyboardRoot(ctx);
+});
 
 bot.on(message("text"), async (ctx) => {
   switch (ctx.message.text) {
