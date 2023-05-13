@@ -53,6 +53,7 @@ bot.on(message("text"), async (ctx) => {
         Markup.inlineKeyboard([
           Markup.button.url("Website", "https://orby-tech.space"),
           Markup.button.url("Telegram", "https://t.me/orby_tech"),
+          Markup.button.url("Telegram Orby tech group", "https://t.me/orby_tech_group"),
           Markup.button.url("Twitter", "https://twitter.com/TimurOrby"),
           Markup.button.url(
             "LinkedIn",
@@ -177,7 +178,7 @@ const keyboardRoot = async (
   >
 ) => {
   return await ctx.reply(
-    "Orby tech bot",
+    "Orby tech bot functions:",
     Markup.keyboard([KEYS.ROOT.REACTION_METRICS_TOOL, KEYS.ROOT.GET_CONTACT], {
       wrap: (btn, index, currentRow) => currentRow.length >= 3,
     })
