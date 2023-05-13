@@ -51,7 +51,7 @@ bot.on(message("text"), async (ctx) => {
       await ctx.reply(
         "All my contacts",
         Markup.inlineKeyboard([
-          Markup.button.url("Website", "https://orby-tech.space"),
+          Markup.button.url("Website", "http://orby-tech.space"),
           Markup.button.url("Telegram", "https://t.me/orby_tech"),
           Markup.button.url("Telegram Orby tech group", "https://t.me/orby_tech_group"),
           Markup.button.url("Twitter", "https://twitter.com/TimurOrby"),
